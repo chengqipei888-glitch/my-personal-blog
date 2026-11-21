@@ -1,2 +1,3 @@
-# my-personal-blog
-My personal blog website.
+# 我的个人博客
+
+一个简洁、优雅的白色风格中文个人博客，使用 GitHub Pages 发布。
