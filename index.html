@@ -1,116 +1,31 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="zh-CN">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>我的个人博客</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#f8f7f4">
+<meta name="description" content="个人博客，记录生活、思考与成长。">
+<title>澄 · 个人博客</title>
 <style>
-*{box-sizing:border-box}
-body{
-  margin:0;
-  background:#101114;
-  color:#eee;
-  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
-  line-height:1.7;
-}
-header{
-  max-width:900px;
-  margin:auto;
-  padding:28px 22px;
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-  border-bottom:1px solid #292a30;
-}
-.logo{font-size:20px;font-weight:bold}
-nav a{
-  color:#aaa;
-  text-decoration:none;
-  margin-left:18px;
-  font-size:14px;
-}
-nav a:hover{color:white}
-main{
-  max-width:850px;
-  margin:90px auto;
-  padding:0 22px;
-}
-.tag{color:#999;font-size:13px;letter-spacing:2px}
-h1{
-  font-size:clamp(36px,8vw, sixty);
-  font-size:clamp(36px,8vw,60px);
-  line-height:1.2;
-  margin:22px 0;
-}
-h1 span{color:#8c9eff}
-.intro{color:#aaa;font-size:17px;max-width:580px}
-.section{margin-top:85px}
-.section h2{font-size:23px;margin-bottom:25px}
-.article{
-  border-top:1px solid #292a30;
-  padding:22px 0;
-}
-.article h3{margin:0;font-size:18px}
-.article p{color:#999;margin:8px 0;font-size:14px}
-.date{color:#777;font-size:12px}
-footer{
-  max-width:850px;
-  margin:100px auto 30px;
-  padding:20px;
-  color:#777;
-  border-top:1px solid #292a30;
-  font-size:13px;
-}
-@media(max-width:500px){
-  header{padding:20px 16px}
-  nav a{margin-left:10px;font-size:12px}
-  main{margin-top:65px}
-}
+:root{--bg:#f8f7f4;--paper:#fff;--ink:#242522;--muted:#777970;--line:#e9e7e1;--accent:#8a927c;--soft:#eeefe9}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--ink);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif;line-height:1.8}a{color:inherit;text-decoration:none}.wrap{width:min(1060px,calc(100% - 44px));margin:auto}
+header{height:78px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid var(--line)}.brand{font-family:Georgia,serif;font-size:23px;letter-spacing:2px}.brand small{font:11px sans-serif;color:var(--muted);letter-spacing:2px;margin-left:9px}nav{display:flex;gap:28px;font-size:13px;color:var(--muted)}nav a:hover,.text-link:hover{color:var(--accent)}
+.hero{padding:105px 0 92px;display:grid;grid-template-columns:1.25fr .75fr;gap:55px;align-items:center}.eyebrow{font-size:11px;letter-spacing:3px;color:var(--accent);text-transform:uppercase}.hero h1{font-family:Georgia,"Songti SC",serif;font-size:clamp(42px,7vw,76px);font-weight:400;line-height:1.22;letter-spacing:1px;margin:22px 0}.hero h1 em{font-style:normal;color:var(--accent)}.lead{max-width:510px;color:var(--muted);font-size:15px}.hero-note{border-left:1px solid #d9dacf;padding:8px 0 8px 26px;color:var(--muted);font-family:Georgia,"Songti SC",serif;font-size:18px}.hero-note span{display:block;font:11px sans-serif;letter-spacing:2px;margin-top:18px;color:#999}
+.section{padding:38px 0 72px}.section-head{display:flex;justify-content:space-between;align-items:end;margin-bottom:24px}.section-head h2{font:normal 29px Georgia,"Songti SC",serif;margin:8px 0}.section-head p{color:var(--muted);font-size:12px;margin:0}.posts{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}.post{background:var(--paper);border:1px solid var(--line);padding:28px 30px;min-height:205px;transition:transform .2s,border-color .2s}.post:hover{transform:translateY(-3px);border-color:#c9cbbd}.post .meta{font-size:11px;color:var(--accent);letter-spacing:1px}.post h3{font:normal 22px Georgia,"Songti SC",serif;margin:13px 0 8px}.post p{font-size:13px;color:var(--muted);margin:0 0 18px}.text-link{font-size:12px;color:#69735d}
+.about{background:var(--soft);padding:38px 42px;display:flex;justify-content:space-between;gap:30px;align-items:center}.about h2{font:normal 28px Georgia,"Songti SC",serif;margin:8px 0}.about p{font-size:13px;color:var(--muted);max-width:620px;margin:0}.about-mark{font:italic 54px Georgia,serif;color:#aab09e}
+footer{margin-top:75px;border-top:1px solid var(--line);padding:25px 0 35px;color:#92948c;font-size:11px;display:flex;justify-content:space-between}
+@media(max-width:650px){.wrap{width:calc(100% - 36px)}header{height:68px}nav{gap:15px;font-size:12px}.brand small{display:none}.hero{padding:75px 0 65px;grid-template-columns:1fr;gap:30px}.hero-note{font-size:16px}.posts{grid-template-columns:1fr}.post{padding:24px;min-height:0}.about{padding:28px 24px}.about-mark{font-size:38px}footer{gap:12px;flex-direction:column}}
 </style>
 </head>
 <body>
-<header>
-  <div class="logo">MY BLOG.</div>
-  <nav>
-    <a href="#home">首页</a>
-    <a href="#articles">文章</a>
-    <a href="#about">关于</a>
-  </nav>
-</header>
-
-<main id="home">
-  <div class="tag">PERSONAL WEBSITE · 2026</div>
-  <h1>你好，<br>欢迎来到<span>我的世界。</span></h1>
-  <p class="intro">
-    这里是我的个人博客。记录生活、分享思考，
-    保存那些值得被记住的瞬间。
-  </p>
-
-  <section class="section" id="articles">
-    <h2>最新文章</h2>
-    <div class="article">
-      <span class="date">2026.11.21</span>
-      <h3>我的个人博客正式上线</h3>
-      <p>这是我的第一篇文章，欢迎来到我的小世界。</p>
-    </div>
-    <div class="article">
-      <span class="date">COMING SOON</span>
-      <h3>更多内容，正在路上……</h3>
-      <p>未来将在这里分享更多故事。</p>
-    </div>
-  </section>
-
-  <section class="section" id="about">
-    <h2>关于我</h2>
-    <p class="intro">
-      一个喜欢探索世界、记录生活的人。
-      很高兴在这里与你相遇。
-    </p>
-  </section>
+<header class="wrap"><a class="brand" href="#top">CHENG.<small>PERSONAL JOURNAL</small></a><nav><a href="#top">首页</a><a href="#writing">文章</a><a href="#about">关于</a></nav></header>
+<main class="wrap" id="top">
+<section class="hero"><div><div class="eyebrow">A PLACE TO THINK & GROW</div><h1>把日子写成<br><em>自己的故事。</em></h1><p class="lead">你好，欢迎来到我的个人空间。这里记录日常的观察、正在发生的思考，以及一路走来的点滴成长。</p></div><div class="hero-note">“慢慢来，<br>比较快。重要的是，<br>一直保持好奇。”<span>— NOTES TO MYSELF</span></div></section>
+<section class="section" id="writing"><div class="section-head"><div><div class="eyebrow">THE JOURNAL</div><h2>最近写下的</h2></div><p>一些想法，一些日常</p></div><div class="posts">
+<article class="post"><div class="meta">2026.11.21 · 建站记录</div><h3>从这里开始</h3><p>给自己建一个小小的角落，记录想法，也记录成长。欢迎来到我的博客。</p><a class="text-link" href="posts/first-post.html">阅读全文 ↗</a></article>
+<article class="post"><div class="meta">随笔 · 持续更新</div><h3>留一点空间给好奇心</h3><p>关于学习、生活与探索世界的念头。新的文章会慢慢放在这里。</p><a class="text-link" href="#about">了解这个博客 ↗</a></article>
+</div></section>
+<section class="section" id="about"><div class="about"><div><div class="eyebrow">A LITTLE ABOUT</div><h2>关于这个小站</h2><p>这是一个属于我的个人博客。我会在这里分享生活记录、学习笔记和个人思考。内容还在慢慢积累，感谢你的到来。</p></div><div class="about-mark">你好。</div></div></section>
 </main>
-
-<footer>
-  © 2026 我的个人博客 · 用心记录每一天
-</footer>
-</body>
-</html>
+<footer class="wrap"><span>© 2026 CHENG · 个人博客</span><span>用文字，收藏时间。</span></footer>
+</body></html>
