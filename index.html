@@ -1,12 +1,116 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>我的个人博客</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>我的个人博客</title>
+<style>
+*{box-sizing:border-box}
+body{
+  margin:0;
+  background:#101114;
+  color:#eee;
+  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+  line-height:1.7;
+}
+header{
+  max-width:900px;
+  margin:auto;
+  padding:28px 22px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  border-bottom:1px solid #292a30;
+}
+.logo{font-size:20px;font-weight:bold}
+nav a{
+  color:#aaa;
+  text-decoration:none;
+  margin-left:18px;
+  font-size:14px;
+}
+nav a:hover{color:white}
+main{
+  max-width:850px;
+  margin:90px auto;
+  padding:0 22px;
+}
+.tag{color:#999;font-size:13px;letter-spacing:2px}
+h1{
+  font-size:clamp(36px,8vw, sixty);
+  font-size:clamp(36px,8vw,60px);
+  line-height:1.2;
+  margin:22px 0;
+}
+h1 span{color:#8c9eff}
+.intro{color:#aaa;font-size:17px;max-width:580px}
+.section{margin-top:85px}
+.section h2{font-size:23px;margin-bottom:25px}
+.article{
+  border-top:1px solid #292a30;
+  padding:22px 0;
+}
+.article h3{margin:0;font-size:18px}
+.article p{color:#999;margin:8px 0;font-size:14px}
+.date{color:#777;font-size:12px}
+footer{
+  max-width:850px;
+  margin:100px auto 30px;
+  padding:20px;
+  color:#777;
+  border-top:1px solid #292a30;
+  font-size:13px;
+}
+@media(max-width:500px){
+  header{padding:20px 16px}
+  nav a{margin-left:10px;font-size:12px}
+  main{margin-top:65px}
+}
+</style>
 </head>
 <body>
-  <h1>欢迎来到我的博客</h1>
-  <p>记录生活，分享想法。</p>
+<header>
+  <div class="logo">MY BLOG.</div>
+  <nav>
+    <a href="#home">首页</a>
+    <a href="#articles">文章</a>
+    <a href="#about">关于</a>
+  </nav>
+</header>
+
+<main id="home">
+  <div class="tag">PERSONAL WEBSITE · 2026</div>
+  <h1>你好，<br>欢迎来到<span>我的世界。</span></h1>
+  <p class="intro">
+    这里是我的个人博客。记录生活、分享思考，
+    保存那些值得被记住的瞬间。
+  </p>
+
+  <section class="section" id="articles">
+    <h2>最新文章</h2>
+    <div class="article">
+      <span class="date">2026.11.21</span>
+      <h3>我的个人博客正式上线</h3>
+      <p>这是我的第一篇文章，欢迎来到我的小世界。</p>
+    </div>
+    <div class="article">
+      <span class="date">COMING SOON</span>
+      <h3>更多内容，正在路上……</h3>
+      <p>未来将在这里分享更多故事。</p>
+    </div>
+  </section>
+
+  <section class="section" id="about">
+    <h2>关于我</h2>
+    <p class="intro">
+      一个喜欢探索世界、记录生活的人。
+      很高兴在这里与你相遇。
+    </p>
+  </section>
+</main>
+
+<footer>
+  © 2026 我的个人博客 · 用心记录每一天
+</footer>
 </body>
 </html>
