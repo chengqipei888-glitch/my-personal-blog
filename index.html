@@ -4,51 +4,47 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="theme-color" content="#f7f7f4">
-<meta name="description" content="CHENG 的个人博客，记录日常观察、学习笔记与成长。">
-<meta property="og:title" content="CHENG. — 个人博客">
-<meta property="og:description" content="把日子写成自己的故事。">
-<meta property="og:type" content="website">
+<meta name="description" content="CHENG 的个人博客，记录生活与思考。">
 <title>CHENG. — 个人博客</title>
 <style>
 :root{color-scheme:light;--bg:#f7f7f4;--paper:#fff;--ink:#242620;--muted:#777b70;--line:#e8e9e2;--accent:#78836c;--soft:#eef0e9;--serif:Georgia,"Songti SC","Noto Serif CJK SC",serif;--sans:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif}
-*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:28px}body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--sans);line-height:1.8;-webkit-font-smoothing:antialiased}a{color:inherit;text-decoration:none}.wrap{width:min(1080px,calc(100% - 48px));margin-inline:auto}.skip{position:absolute;left:-9999px}.skip:focus{left:16px;top:12px;background:#fff;padding:8px 12px;z-index:10}
-.site-header{height:82px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid var(--line)}.brand{font:24px var(--serif);letter-spacing:2px}.brand span{font:10px var(--sans);letter-spacing:2px;color:var(--muted);margin-left:10px}.nav{display:flex;gap:30px;font-size:13px;color:var(--muted)}.nav a{transition:color .2s}.nav a:hover,.nav a:focus-visible{color:var(--accent)}
-.hero{padding:112px 0 100px;display:grid;grid-template-columns:minmax(0,1.25fr) minmax(230px,.75fr);gap:64px;align-items:center}.eyebrow{font-size:10px;letter-spacing:3px;color:var(--accent);text-transform:uppercase}.hero h1{font:400 clamp(44px,7vw,78px)/1.25 var(--serif);letter-spacing:1px;margin:22px 0 20px}.hero h1 em{font-style:normal;color:var(--accent)}.lead{max-width:520px;color:var(--muted);font-size:15px;margin:0}.hero-actions{display:flex;align-items:center;gap:22px;margin-top:30px}.primary-link{display:inline-flex;align-items:center;gap:12px;background:var(--ink);color:white;padding:11px 18px;font-size:12px;letter-spacing:.5px;transition:background .2s}.primary-link:hover{background:var(--accent)}.quiet-link{font-size:12px;color:var(--muted)}.hero-aside{border-left:1px solid #d8dccf;padding:10px 0 10px 28px;color:#686e61;font:19px/1.9 var(--serif)}.hero-aside small{display:block;margin-top:18px;font:10px var(--sans);letter-spacing:2px;color:#969a8e}
-.section{padding:30px 0 82px}.section-head{display:flex;justify-content:space-between;align-items:end;margin-bottom:25px}.section-head h2,.about h2{font:400 30px var(--serif);margin:7px 0 0}.section-note{font-size:12px;color:var(--muted);margin:0}.post-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}.post-card{background:var(--paper);border:1px solid var(--line);padding:30px 32px;min-height:220px;display:flex;flex-direction:column;align-items:flex-start;transition:transform .22s,border-color .22s,box-shadow .22s}.post-card:hover{transform:translateY(-3px);border-color:#cbd0c2;box-shadow:0 12px 32px rgba(35,40,29,.045)}.post-meta{font-size:10px;letter-spacing:1.5px;color:var(--accent)}.post-card h3{font:400 23px var(--serif);margin:13px 0 8px}.post-card p{font-size:13px;color:var(--muted);margin:0 0 22px}.post-card .read{margin-top:auto;color:var(--accent);font-size:12px}
-.about-panel{background:var(--soft);padding:40px 44px;display:flex;justify-content:space-between;align-items:center;gap:30px}.about-copy{max-width:700px}.about h2{margin:8px 0 12px}.about p{font-size:13px;color:var(--muted);margin:0}.about-mark{font:italic 54px var(--serif);color:#a5ad98;white-space:nowrap}
-.site-footer{margin-top:80px;border-top:1px solid var(--line);padding:25px 0 34px;color:#92968b;font-size:11px;display:flex;justify-content:space-between;gap:14px}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--sans);line-height:1.8;-webkit-font-smoothing:antialiased}a{color:inherit;text-decoration:none}.wrap{width:min(900px,calc(100% - 40px));margin:auto}
+header{height:76px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid var(--line)}.brand{font:24px var(--serif);letter-spacing:2px}.nav{display:flex;gap:26px;font-size:13px;color:var(--muted)}
+.hero{padding:110px 0 100px}.eyebrow{font-size:10px;letter-spacing:3px;color:var(--accent)}h1{font:400 clamp(42px,8vw,72px)/1.35 var(--serif);margin:18px 0}.hero p{color:var(--muted);font-size:14px;margin:0}.section{padding:24px 0 76px}.section-head{margin-bottom:22px}.section-head h2,.about h2{font:400 28px var(--serif);margin:6px 0}.post{background:var(--paper);border:1px solid var(--line);padding:28px 30px;max-width:620px}.meta{font-size:11px;color:var(--accent);letter-spacing:1px}.post h3{font:400 22px var(--serif);margin:10px 0}.post p,.about p{font-size:13px;color:var(--muted);margin:0}.read{display:inline-block;margin-top:16px;font-size:12px;color:var(--accent)}
+.about{padding-bottom:70px}.about-inner{background:var(--soft);padding:30px}.about h2{margin:6px 0 8px}
+footer{border-top:1px solid var(--line);padding:22px 0 30px;color:#92968b;font-size:11px}
 a:focus-visible{outline:2px solid var(--accent);outline-offset:4px}
-@media(max-width:700px){.wrap{width:calc(100% - 36px)}.site-header{height:70px}.brand{font-size:21px}.brand span{display:none}.nav{gap:17px;font-size:12px}.hero{padding:78px 0 66px;grid-template-columns:1fr;gap:34px}.hero h1{font-size:clamp(43px,12vw,62px)}.hero-aside{font-size:16px;padding-left:20px}.section{padding-bottom:62px}.post-grid{grid-template-columns:1fr}.post-card{min-height:0;padding:25px}.about-panel{padding:30px 25px}.about-mark{font-size:38px}.site-footer{margin-top:60px;flex-direction:column}}
-@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{transition:none!important}}
+@media(max-width:600px){.wrap{width:calc(100% - 36px)}header{height:68px}.brand{font-size:21px}.nav{gap:18px}.hero{padding:82px 0 70px}.section{padding-bottom:58px}.post{padding:24px}.about-inner{padding:25px}}
 </style>
 </head>
 <body>
-<a class="skip" href="#main">跳到正文</a>
-<header class="site-header wrap">
-<a class="brand" href="#top" aria-label="CHENG 个人博客首页">CHENG.<span>PERSONAL JOURNAL</span></a>
-<nav class="nav" aria-label="主导航"><a href="#top">首页</a><a href="#writing">文章</a><a href="#about">关于</a></nav>
+<header class="wrap">
+<a class="brand" href="#top">CHENG.</a>
+<nav class="nav" aria-label="主导航"><a href="#writing">文章</a><a href="#about">关于</a></nav>
 </header>
-<main class="wrap" id="main">
-<section class="hero" id="top">
-<div>
-<div class="eyebrow">A PLACE TO THINK & GROW</div>
-<h1>把日子写成<br><em>自己的故事。</em></h1>
-<p class="lead">你好，欢迎来到我的个人空间。这里记录日常的观察、正在发生的思考，以及一路走来的点滴成长。</p>
-<div class="hero-actions"><a class="primary-link" href="#writing">阅读文章 <span aria-hidden="true">↗</span></a><a class="quiet-link" href="#about">认识这个小站</a></div>
-</div>
-<aside class="hero-aside">慢慢来，比较快。<br>重要的是，<br>一直保持好奇。<small>— NOTES TO MYSELF</small></aside>
+<main class="wrap" id="top">
+<section class="hero">
+<div class="eyebrow">PERSONAL BLOG</div>
+<h1>记录生活，<br>也记录思考。</h1>
+<p>你好，欢迎来到我的个人博客。</p>
 </section>
 <section class="section" id="writing">
-<div class="section-head"><div><div class="eyebrow">THE JOURNAL</div><h2>最近写下的</h2></div><p class="section-note">一些想法，一些日常</p></div>
-<div class="post-grid">
-<article class="post-card"><div class="post-meta">2026.11.21 · 建站记录</div><h3>从这里开始</h3><p>给自己建一个小小的角落，记录想法，也记录成长。欢迎来到我的博客。</p><a class="read" href="posts/first-post.html">阅读全文 <span aria-hidden="true">↗</span></a></article>
-<article class="post-card"><div class="post-meta">随笔 · 持续更新</div><h3>留一点空间给好奇心</h3><p>关于学习、生活与探索世界的念头。新的文章会慢慢放在这里。</p><a class="read" href="#about">了解这个博客 <span aria-hidden="true">↗</span></a></article>
+<div class="section-head"><div class="eyebrow">WRITING</div><h2>文章</h2></div>
+<article class="post">
+<div class="meta">2026.11.21 · 随笔</div>
+<h3>从这里开始</h3>
+<p>给自己一个记录生活与思考的地方。</p>
+<a class="read" href="posts/first-post.html">阅读全文 ↗</a>
+</article>
+</section>
+<section class="about" id="about">
+<div class="about-inner">
+<div class="eyebrow">ABOUT</div>
+<h2>关于</h2>
+<p>我是 CHENG。这里记录生活、学习与思考。</p>
 </div>
 </section>
-<section class="section about" id="about">
-<div class="about-panel"><div class="about-copy"><div class="eyebrow">A LITTLE ABOUT</div><h2>关于这个小站</h2><p>这是一个属于我的个人博客。我会在这里分享生活记录、学习笔记和个人思考。内容还在慢慢积累，感谢你的到来。</p></div><div class="about-mark" aria-hidden="true">你好。</div></div>
-</section>
 </main>
-<footer class="site-footer wrap"><span>© 2026 CHENG · 个人博客</span><span>用文字，收藏时间。</span></footer>
+<footer class="wrap">© 2026 CHENG.</footer>
 </body>
 </html>
